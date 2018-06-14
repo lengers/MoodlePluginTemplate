@@ -1,0 +1,1 @@
+for fucks sake# MoodlePluginTemplate

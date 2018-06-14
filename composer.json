@@ -1,0 +1,51 @@
+{
+    "name": "DHBW-sWIm/plugin-template",
+    "description": "Template for developing Moodle plugins with Travis CI integration",
+    "keywords": [
+        "moodle",
+        "travis",
+        "ci",
+        "testing"
+    ],
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Tobias Rahloff",
+            "email": "rahloff+swim@gmail.com",
+            "homepage": "https://tobiasrahloff.com",
+            "role": "Architect/Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "url": "https://github.com/DHBW-sWIm/ActivitiApiDefinition.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "trahloff/activiti": "dev-master"
+    },
+    "require-dev": {
+        "moodlerooms/moodle-coding-standard": "^2.0",
+        "phpunit/phpunit": "^6.5",
+        "behat/behat": "^3.4"
+    },
+    "config": {
+        "platform": {
+            "php": "7.0"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/phpcs --ignore=vendor --standard=vendor/moodlerooms/moodle-coding-standard/moodle ./source",
+        "autofix": "vendor/bin/phpcbf --ignore=vendor --standard=vendor/moodlerooms/moodle-coding-standard/moodle ./source",
+        "unit": "phpunit",
+        "behat": "behat",
+        "test": [
+            "@autofix",
+            "@lint",
+            "@unit",
+            "@behat"
+        ]
+    }
+}
