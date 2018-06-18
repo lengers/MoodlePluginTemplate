@@ -5,7 +5,7 @@
 ## Autofix aller Linter Errors
 
 1. [Composer](https://getcomposer.org/doc/00-intro.md) installieren
-1. `$ composer install`
+1. `$ composer install --no-dev`
 1. `$ composer autofix`
 
 ## Offizielle Moodle Doku
